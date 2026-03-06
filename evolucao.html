@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolução - Grand Chase</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
+</head>
+<body>
+    <header class="navbar-only">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-icon">⚔️</span>
+                    <span class="logo-text">Grand Chase</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Início</a></li>
+                    <li><a href="evolucao.html" class="nav-link active">Evolução</a></li>
+                    <li><a href="runas.html" class="nav-link">Runas</a></li>
+                    <li><a href="#community" class="nav-link">Comunidade</a></li>
+                    <li><a href="noticias.html" class="nav-link">Últimas Notícias</a></li>
+                </ul>
+                
+            </div>
+        </nav>
+    </header>
+
+    <main class="evolucao-main">
+        <section class="unified-form">
+            <div class="container">
+                <h1 class="page-title">EVOLUÇÃO</h1>
+                <p class="page-subtitle">Gerencie o progresso dos seus personagens e acompanhe sua evolução</p>
+                
+                <!-- Formulário Unificado -->
+                <div class="account-card">
+                    <h2>Informações da Conta</h2>
+                    <form id="unifiedForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="accountName">Nome da Conta:</label>
+                                <input type="text" id="accountName" name="accountName" placeholder="Digite seu nome de usuário">
+                            </div>
+                            <div class="form-group">
+                                <label for="cardLevel">Nível de Coleção de Cartas:</label>
+                                <input type="number" id="cardLevel" name="cardLevel" min="1" max="100" placeholder="Nível 1-100">
+                            </div>
+                            <div class="form-group">
+                                <label for="chaseLevel">Chase Level:</label>
+                                <input type="number" id="chaseLevel" name="chaseLevel" min="1" max="200" placeholder="Nível 1-200">
+                            </div>
+                        </div>
+                        
+                        <hr class="form-divider">
+                        
+                        <h3>Personagens</h3>
+                        <div class="characters-grid" id="charactersGrid">
+                            <!-- Os 24 personagens serão gerados por JavaScript -->
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">SALVAR TUDO</button>
+                            <button type="button" id="resetForm" class="btn btn-secondary">RESETAR VALORES</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Relatório Geral e Exportação -->
+        <section class="report-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Relatório Geral da Conta</h2>
+                    <div class="export-buttons">
+                        <button id="exportPDF" class="btn btn-secondary" onclick="exportToPDF()">Exportar PDF</button>
+                        <button id="exportExcel" class="btn btn-secondary" onclick="exportToExcel()">Exportar Excel</button>
+                        <button id="exportCSV" class="btn btn-secondary" onclick="exportToCSV()">Exportar CSV</button>
+                        <button id="printReport" class="btn btn-secondary" onclick="printReport()">Imprimir</button>
+                    </div>
+                </div>
+                
+                <div class="report-summary" id="reportSummary">
+                    <div class="summary-card">
+                        <h3>Estatísticas Gerais</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-label">Personagens Totais:</span>
+                                <span class="stat-value" id="totalCharacters">24</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Personagens Despertados:</span>
+                                <span class="stat-value" id="awakenedCharacters">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Nível Médio:</span>
+                                <span class="stat-value" id="averageLevel">1</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">ATK Total:</span>
+                                <span class="stat-value" id="totalAttack">24000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <h3>Progresso na Torre das Ilusões</h3>
+                        <div class="tower-progress" id="towerProgress">
+                            <p>Nenhum personagem registrado na torre ainda.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-card">
+                        <h3>Visão Geral dos Personagens</h3>
+                        <div class="characters-overview" id="charactersOverview">
+                            <!-- Cards de personagens com imagens serão gerados aqui -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Grand Chase</h3>
+                    <p>A aventura épica que conquistou milhões de jogadores</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="evolucao.html">Evolução</a></li>
+                        <li><a href="#">Suporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Comunidade</h4>
+                    <ul>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Forum</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Grand Chase Fan Site. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="export.js"></script>
+    <script>
+        // Dados dos 24 personagens do Grand Chase com imagens
+        const characters = [
+            { name: "Elesis", classes: 4, element: "Fogo", image: "https://static.wikia.nocookie.net/grandchase/images/7/74/Ui_character_gc_classic_Elesis_1.png/revision/latest?cb=20210731182435&path-prefix=pt-br" },
+            { name: "Lire", classes: 4, element: "Fogo", image: "https://static.wikia.nocookie.net/grandchase/images/5/53/Ui_character_gc_classic_Lire_1.png/revision/latest?cb=20210731182532&path-prefix=pt-br" },
+            { name: "Arme", classes: 4, element: "Fogo", image: "https://static.wikia.nocookie.net/grandchase/images/b/be/Ui_character_gc_classic_Arme_1.png/revision/latest?cb=20210731182629&path-prefix=pt-br" },
+            { name: "Lass", classes: 4, element: "Sombra", image: "https://static.wikia.nocookie.net/grandchase/images/e/ee/Ui_character_gc_classic_Lass_1.png/revision/latest?cb=20210731182705&path-prefix=pt-br" },
+            { name: "Ryan", classes: 4, element: "Natureza", image: "https://static.wikia.nocookie.net/grandchase/images/1/18/Ui_character_gc_classic_Ryan_1.png/revision/latest?cb=20210731184056&path-prefix=pt-br" },
+            { name: "Ronan", classes: 4, element: "Luz", image: "https://static.wikia.nocookie.net/grandchase/images/b/b9/Ui_character_gc_classic_Ronan_1.png/revision/latest?cb=20210731184139&path-prefix=pt-br" },
+            { name: "Amy", classes: 4, element: "Luz", image: "https://static.wikia.nocookie.net/grandchase/images/6/61/Ui_character_gc_classic_Amy_1.png/revision/latest?cb=20210731184226&path-prefix=pt-br" },
+            { name: "Jin", classes: 3, element: "Luz", image: "https://static.wikia.nocookie.net/grandchase/images/9/9a/Ui_character_gc_classic_Jin_1.png/revision/latest?cb=20210731184302&path-prefix=pt-br" },
+            { name: "Sieghart", classes: 4, element: "Luz", image: "https://static.wikia.nocookie.net/grandchase/images/f/f6/Ui_character_gc_classic_Sieghart_1.png/revision/latest?cb=20210731184357&path-prefix=pt-br" },
+            { name: "Mari", classes: 4, element: "Tecnologia", image: "https://static.wikia.nocookie.net/grandchase/images/f/f4/Ui_character_gc_classic_Mari_1.png/revision/latest?cb=20210731184430&path-prefix=pt-br" },
+            { name: "Dio", classes: 4, element: "Sombra", image: "https://static.wikia.nocookie.net/grandchase/images/7/73/Ui_character_gc_classic_Dio_1.png/revision/latest?cb=20210731184504&path-prefix=pt-br" },
+            { name: "Zero", classes: 4, element: "Sombra", image: "https://static.wikia.nocookie.net/grandchase/images/c/c6/Ui_character_gc_classic_Zero_1.png/revision/latest?cb=20210731184534&path-prefix=pt-br" },
+            { name: "Rey", classes: 4, element: "Sombra", image: "https://static.wikia.nocookie.net/grandchase/images/1/16/Ui_character_gc_classic_Rey_1.png/revision/latest?cb=20210731184602&path-prefix=pt-br" },
+            { name: "Lupus", classes: 4, element: "Sombra", image: "https://static.wikia.nocookie.net/grandchase/images/0/01/Ui_character_gc_classic_Lupus_1.png/revision/latest?cb=20210731192630&path-prefix=pt-br" },
+            { name: "Lin", classes: 4, element: "Sombra", image: "https://static.wikia.nocookie.net/grandchase/images/5/59/Ui_character_gc_classic_Lin_1.png/revision/latest?cb=20210731192602&path-prefix=pt-br" },
+            { name: "Edel", classes: 4, element: "Gelo", image: "https://static.wikia.nocookie.net/grandchase/images/2/22/Ui_character_gc_classic_Edel_1.png/revision/latest?cb=20210731192500&path-prefix=pt-br" },
+            { name: "Veigas", classes: 4, element: "Sombra", image: "https://static.wikia.nocookie.net/grandchase/images/e/e3/Ui_character_gc_classic_Veigas_1.png/revision/latest?cb=20210731192735&path-prefix=pt-br" },
+            { name: "Uno", classes: 4, element: "Luz", image: "https://static.wikia.nocookie.net/grandchase/images/5/58/Ui_character_gc_classic_Uno_1.png/revision/latest?cb=20210731192700&path-prefix=pt-br" },
+            { name: "Decane", classes: 4, element: "Sombra", image: "https://static.wikia.nocookie.net/grandchase/images/2/2b/Ui_character_gc_classic_Decane_1.png/revision/latest?cb=20230121220349&path-prefix=pt-br" },
+            { name: "Ai", classes: 4, element: "Luz", image: "https://static.wikia.nocookie.net/grandchase/images/9/9a/Ui_character_gc_classic_Ai_1.png/revision/latest?cb=20230706184235&path-prefix=pt-br" },
+            { name: "Kallia", classes: 4, element: "Sombra", image: "https://static.wikia.nocookie.net/grandchase/images/e/e2/Ui_character_gc_classic_Kallia_1.png/revision/latest?cb=20240201084706&path-prefix=pt-br" },
+            { name: "Iris", classes: 4, element: "Luz", image: "https://static.wikia.nocookie.net/grandchase/images/d/d3/Ui_character_gc_classic_Iris.png/revision/latest?cb=20250911154712&path-prefix=pt-br" },
+            { name: "Lime", classes: 3, element: "Natureza", image: "https://static.wikia.nocookie.net/grandchase/images/1/18/Ui_character_gc_classic_Ryan_1.png/revision/latest?cb=20210731184056&path-prefix=pt-br" },
+            { name: "Asin", classes: 4, element: "Sombra", image: "https://static.wikia.nocookie.net/grandchase/images/e/ee/Ui_character_gc_classic_Lass_1.png/revision/latest?cb=20210731182705&path-prefix=pt-br" },
+            { name: "Ungh", classes: 3, element: "Terra", image: "https://static.wikia.nocookie.net/grandchase/images/5/58/Ui_character_gc_classic_Uno_1.png/revision/latest?cb=20210731192700&path-prefix=pt-br" }
+        ];
+
+        // Função para criar os cards dos personagens com valores padrão e imagens
+        function createCharacterCards() {
+            const grid = document.getElementById('charactersGrid');
+            
+            characters.forEach((char, index) => {
+                const card = document.createElement('div');
+                card.className = 'character-card';
+                card.innerHTML = `
+                    <div class="character-header-simple">
+                        <div class="character-image">
+                            <img src="${char.image}" alt="${char.name}" loading="lazy">
+                        </div>
+                        <h3>${char.name}</h3>
+                    </div>
+                    <div class="character-form-body" data-character="${char.name}">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="attack-${index}">Attack:</label>
+                                <input type="number" id="attack-${index}" name="attack" value="1000" min="0" placeholder="1000">
+                            </div>
+                            <div class="form-group">
+                                <label for="level-${index}">Nível:</label>
+                                <input type="number" id="level-${index}" name="level" value="1" min="1" max="100" placeholder="1-100">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="class-${index}">Classe:</label>
+                                <select id="class-${index}" name="class" value="1">
+                                    <option value="1" selected>Classe 1</option>
+                                    ${generateClassOptions(char.classes).slice(1)}
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="tower-${index}">Torre:</label>
+                                <input type="number" id="tower-${index}" name="tower" value="1" min="1" max="100" placeholder="1-100">
+                            </div>
+                        </div>
+                        <div class="form-row checkbox-row">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="awakened-${index}" name="awakened">
+                                <label for="awakened-${index}">Despertado</label>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Função para gerar opções de classe
+        function generateClassOptions(maxClasses) {
+            let options = '';
+            for (let i = 1; i <= maxClasses; i++) {
+                options += `<option value="${i}">Classe ${i}</option>`;
+            }
+            return options;
+        }
+
+        // Função para salvar dados do formulário unificado
+        document.getElementById('unifiedForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Coletar dados da conta
+            const accountData = {
+                accountName: document.getElementById('accountName').value || '',
+                cardLevel: document.getElementById('cardLevel').value || '',
+                chaseLevel: document.getElementById('chaseLevel').value || ''
+            };
+            
+            // Coletar dados dos personagens
+            const charactersData = {};
+            const characterForms = document.querySelectorAll('.character-form');
+            
+            characterForms.forEach(form => {
+                const characterName = form.dataset.character;
+                const formData = new FormData(form);
+                
+                // Aplicar valores padrão se estiverem vazios
+                const attack = formData.get('attack') || '1000';
+                const level = formData.get('level') || '1';
+                const characterClass = formData.get('class') || '1';
+                const tower = formData.get('tower') || '1';
+                const awakened = formData.has('awakened');
+                
+                charactersData[characterName] = {
+                    attack: attack,
+                    level: level,
+                    class: characterClass,
+                    tower: tower,
+                    awakened: awakened
+                };
+            });
+            
+            // Salvar tudo no localStorage
+            localStorage.setItem('accountData', JSON.stringify(accountData));
+            localStorage.setItem('charactersData', JSON.stringify(charactersData));
+            
+            // Atualizar relatório
+            updateReport();
+            
+            alert('Todos os dados foram salvos com sucesso!');
+        });
+
+        // Função para resetar valores padrão
+        document.getElementById('resetForm').addEventListener('click', function() {
+            if (confirm('Deseja resetar todos os valores para os padrões?')) {
+                // Resetar conta
+                document.getElementById('accountName').value = '';
+                document.getElementById('cardLevel').value = '';
+                document.getElementById('chaseLevel').value = '';
+                
+                // Resetar personagens para valores padrão
+                const characterForms = document.querySelectorAll('.character-form');
+                characterForms.forEach((form, index) => {
+                    form.querySelector(`input[name="attack"]`).value = '1000';
+                    form.querySelector(`input[name="level"]`).value = '1';
+                    form.querySelector(`select[name="class"]`).value = '1';
+                    form.querySelector(`input[name="tower"]`).value = '1';
+                    form.querySelector(`input[name="awakened"]`).checked = false;
+                });
+                
+                alert('Valores resetados para os padrões!');
+            }
+        });
+
+        // Função para atualizar o relatório
+        function updateReport() {
+            const accountData = JSON.parse(localStorage.getItem('accountData') || '{}');
+            let charactersData = JSON.parse(localStorage.getItem('charactersData') || '{}');
+            
+            // Garantir que todos os personagens tenham dados (usar valores padrão se não existirem)
+            const allCharactersData = {};
+            characters.forEach(char => {
+                if (charactersData[char.name]) {
+                    allCharactersData[char.name] = charactersData[char.name];
+                } else {
+                    // Usar valores padrão
+                    allCharactersData[char.name] = {
+                        attack: '1000',
+                        level: '1',
+                        class: '1',
+                        tower: '1',
+                        awakened: false
+                    };
+                }
+            });
+            
+            // Atualizar estatísticas
+            const awakenedCount = Object.values(allCharactersData).filter(char => char.awakened).length;
+            const totalAttack = Object.values(allCharactersData).reduce((sum, char) => sum + (parseInt(char.attack) || 1000), 0);
+            const levels = Object.values(allCharactersData).map(char => parseInt(char.level) || 1);
+            const avgLevel = levels.length > 0 ? Math.round(levels.reduce((a, b) => a + b, 0) / levels.length) : 1;
+            
+            // Atualizar elementos DOM
+            document.getElementById('awakenedCharacters').textContent = awakenedCount;
+            document.getElementById('totalAttack').textContent = totalAttack.toLocaleString();
+            document.getElementById('averageLevel').textContent = avgLevel;
+            
+            // Atualizar progresso na torre
+            const towerCharacters = Object.entries(allCharactersData)
+                .filter(([name, data]) => data.tower && data.tower > 1)
+                .sort((a, b) => b[1].tower - a[1].tower);
+            
+            const towerProgress = document.getElementById('towerProgress');
+            if (towerCharacters.length > 0) {
+                towerProgress.innerHTML = towerCharacters.map(([name, data]) => 
+                    `<div class="tower-item">
+                        <strong>${name}:</strong> Andar ${data.tower}
+                    </div>`
+                ).join('');
+            } else {
+                towerProgress.innerHTML = '<p>Nenhum personagem registrado na torre ainda.</p>';
+            }
+            
+            // Criar cards de personagens para visão geral
+            createCharactersOverview(allCharactersData);
+        }
+        
+        // Função para criar cards de personagens na visão geral
+        function createCharactersOverview(charactersData) {
+            const overview = document.getElementById('charactersOverview');
+            overview.innerHTML = '';
+            
+            // Criar grid de personagens
+            const charactersGrid = document.createElement('div');
+            charactersGrid.className = 'overview-grid';
+            
+            Object.entries(charactersData).forEach(([name, data]) => {
+                const characterInfo = characters.find(char => char.name === name);
+                if (characterInfo) {
+                    const card = document.createElement('div');
+                    card.className = 'overview-card';
+                    card.innerHTML = `
+                        <div class="overview-image">
+                            <img src="${characterInfo.image}" alt="${name}" loading="lazy">
+                        </div>
+                        <div class="overview-info">
+                            <h4>${name}</h4>
+                            <div class="overview-stats">
+                                <span class="overview-stat">Nível: ${data.level}</span>
+                                <span class="overview-stat">ATK: ${data.attack}</span>
+                                <span class="overview-stat">Torre: ${data.tower}</span>
+                            </div>
+                            <div class="overview-badges">
+                                <span class="overview-badge class-${data.class}">Classe ${data.class}</span>
+                                ${data.awakened ? '<span class="overview-badge awakened">Despertado</span>' : ''}
+                            </div>
+                        </div>
+                    `;
+                    charactersGrid.appendChild(card);
+                }
+            });
+            
+            overview.appendChild(charactersGrid);
+        }
+
+        // Garantir que a função createCharacterCards seja chamada imediatamente
+        createCharacterCards();
+        
+        // Inicializar a página
+        document.addEventListener('DOMContentLoaded', function() {
+            updateReport();
+            
+            // Carregar dados salvos
+            const accountData = JSON.parse(localStorage.getItem('accountData') || '{}');
+            if (accountData.accountName) {
+                document.getElementById('accountName').value = accountData.accountName;
+                document.getElementById('cardLevel').value = accountData.cardLevel;
+                document.getElementById('chaseLevel').value = accountData.chaseLevel;
+            }
+            
+            const charactersData = JSON.parse(localStorage.getItem('charactersData') || '{}');
+            Object.entries(charactersData).forEach(([name, data]) => {
+                const form = document.querySelector(`[data-character="${name}"]`);
+                if (form) {
+                    if (data.attack) form.querySelector(`input[name="attack"]`).value = data.attack;
+                    if (data.level) form.querySelector(`input[name="level"]`).value = data.level;
+                    if (data.class) form.querySelector(`select[name="class"]`).value = data.class;
+                    if (data.tower) form.querySelector(`input[name="tower"]`).value = data.tower;
+                    if (data.awakened) form.querySelector(`input[name="awakened"]`).checked = true;
+                }
+            });
+            
+            // Verificar se os personagens foram criados
+            const grid = document.getElementById('charactersGrid');
+            if (grid && grid.children.length === 0) {
+                console.log('Grid está vazio, criando personagens...');
+                createCharacterCards();
+            }
+        });
+    </script>
+</body>
+</html>

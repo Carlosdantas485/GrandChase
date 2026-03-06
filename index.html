@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Chase - Portal Oficial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
+</head>
+<body>
+    <header class="navbar-only">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-icon">⚔️</span>
+                    <span class="logo-text">Grand Chase</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Início</a></li>
+                    <li><a href="evolucao.html" class="nav-link">Evolução</a></li>
+                    <li><a href="runas.html" class="nav-link">Runas</a></li>
+                    <li><a href="#community" class="nav-link">Comunidade</a></li>
+                    <li><a href="noticias.html" class="nav-link">Últimas Notícias</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Grand Chase</h1>
+                <p class="hero-subtitle">A aventura épica espera pelos bravos cavaleiros</p>
+                <p class="hero-description">
+                    Junte-se aos lendários cavaleiros de Grand Chase em uma jornada para salvar o continente de Bermesiah 
+                    das forças das trevas. Escolha seu personagem, domine habilidades poderosas e torne-se um herói!
+                </p>
+                <div class="hero-buttons">
+                    <a href="evolucao.html" class="btn btn-primary">Gerenciar Personagens</a>
+                    <a href="runas.html" class="btn btn-secondary">Conhecer Runas</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="character-showcase">
+                    <div class="character-card active" data-character="elesis">
+                        <div class="character-avatar"><img src="Chars/Ui_character_gc_classic_Elesis_1.jpg" alt="Elesis"></div>
+                        <h3>Elesis</h3>
+                        <p>Cavaleira Vermelha</p>
+                    </div>
+                    <div class="character-card" data-character="lire">
+                        <div class="character-avatar"><img src="Chars/Ui_character_gc_classic_Lire_1.jpg" alt="Lire"></div>
+                        <h3>Lire</h3>
+                        <p>Arqueira Elfa</p>
+                    </div>
+                    <div class="character-card" data-character="arme">
+                        <div class="character-avatar"><img src="Chars/Ui_character_gc_classic_Arme_1.jpg" alt="Arme"></div>
+                        <h3>Arme</h3>
+                        <p>Maga Arcana</p>
+                    </div>
+                    <div class="character-card" data-character="ronan">
+                        <div class="character-avatar"><img src="Chars/Ui_character_gc_classic_Ronan_1.jpg" alt="Ronan"></div>
+                        <h3>Ronan</h3>
+                        <p>Mago Espadachim</p>
+                    </div>
+                    <div class="character-card" data-character="lass">
+                        <div class="character-avatar"><img src="Chars/Ui_character_gc_classic_Lass_1.jpg" alt="Lass"></div>
+                        <h3>Lass</h3>
+                        <p>Assassino Sombrio</p>
+                    </div>
+                    <div class="character-card" data-character="ryan">
+                        <div class="character-avatar"><img src="Chars/Ui_character_gc_classic_Ryan_1.jpg" alt="Ryan"></div>
+                        <h3>Ryan</h3>
+                        <p>Druida</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="characters" class="characters-section">
+            <div class="container">
+                <h2 class="section-title">Personagens Lendários</h2>
+                <div class="characters-grid">
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Elesis_1.jpg" alt="Elesis" class="character-img"></div>
+                            <h3>Elesis</h3>
+                            <span class="character-class">Cavaleira</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Elesis é uma cavaleira habilidosa que luta com sua espada para proteger seu povo. 
+                            Com ataques poderosos e defesa sólida, ela é uma guerreira formidável no campo de batalha.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Lire_1.jpg" alt="Lire" class="character-img"></div>
+                            <h3>Lire</h3>
+                            <span class="character-class">Arqueira</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Lire é uma arqueira élfica com precisão incrível. Seus ataques à distância podem 
+                            atingir múltiplos inimigos e ela possui habilidades de suporte valiosas para a equipe.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Arme_1.jpg" alt="Arme" class="character-img"></div>
+                            <h3>Arme</h3>
+                            <span class="character-class">Maga</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Arme é uma maga poderosa que domina a magia elemental. Com feitiços devastadores 
+                            e habilidades de controle, ela pode mudar o rumo de qualquer batalha.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 50%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Lass_1.jpg" alt="Lass" class="character-img"></div>
+                            <h3>Lass</h3>
+                            <span class="character-class">Assassino</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Lass é um assassino ágil e mortal. Com ataques rápidos e furtivos, 
+                            ele pode eliminar inimigos antes mesmo que percebam sua presença.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 55%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Ronan_1.jpg" alt="Ronan" class="character-img"></div>
+                            <h3>Ronan</h3>
+                            <span class="character-class">Mago Espadachim</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Ronan é um mago espadachim que combina magia poderosa com habilidades de espada. 
+                            Sua versatilidade em combate o torna um adversário imprevisível.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 88%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Ryan_1.jpg" alt="Ryan" class="character-img"></div>
+                            <h3>Ryan</h3>
+                            <span class="character-class">Druida</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Ryan é um druida com conexão profunda com a natureza. Ele pode se transformar 
+                            em animais poderosos e usar magia elemental para proteger seus aliados.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 78%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Sieghart_1.jpg" alt="Sieghart" class="character-img"></div>
+                            <h3>Sieghart</h3>
+                            <span class="character-class">Guerreiro Divino</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Sieghart é um guerreiro lendário com poderes divinos. Sua força sobre-humana 
+                            e habilidades de combate o tornam um dos combatentes mais temidos.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 92%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 88%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 72%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Amy_1.jpg" alt="Amy" class="character-img"></div>
+                            <h3>Amy</h3>
+                            <span class="character-class">Dançarina</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Amy é uma dançarina graciosa que usa movimentos ritmados para canalizar magia. 
+                            Suas habilidades de suporte e ataques ágeis a tornam essencial em equipe.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Jin_1.jpg" alt="Jin" class="character-img"></div>
+                            <h3>Jin</h3>
+                            <span class="character-class">Lutador</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Jin é um mestre das artes marciais que combate com mãos nuas. Sua disciplina 
+                            e força interior lhe concedem habilidades de combate impressionantes.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 88%"></div>
+                                    </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Mari_1.jpg" alt="Mari" class="character-img"></div>
+                            <h3>Mari</h3>
+                            <span class="character-class">Tecnomaga</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Mari é uma tecnomaga que combina magia com tecnologia avançada. Suas invenções 
+                            e dispositivos tecnológicos lhe dão vantagem única em combate.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 76%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Dio_1.jpg" alt="Dio" class="character-img"></div>
+                            <h3>Dio</h3>
+                            <span class="character-class">Profano</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Dio é um ser profano com poderes demoníacos. Sua conexão com as trevas 
+                            lhe concede habilidades devastadoras e controle sobre forças sombrias.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 94%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 58%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Zero_1.jpg" alt="Zero" class="character-img"></div>
+                            <h3>Zero</h3>
+                            <span class="character-class">Andarilho</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Zero é um andarilho misterioso com habilidades únicas. Sua jornada 
+                            constante lhe concedeu experiência em diversas técnicas de combate.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 83%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 68%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 86%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Lupus_1.jpg" alt="Lupus" class="character-img"></div>
+                            <h3>Lupus</h3>
+                            <span class="character-class">Caçador de Recompensas</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Lupus é um caçador de recompensas habilidoso. Sua precisão com armas 
+                            de fogo e instintos de caçador o tornam mortal à distância.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 89%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 62%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 84%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Edel_1.jpg" alt="Edel" class="character-img"></div>
+                            <h3>Edel</h3>
+                            <span class="character-class">Capitã</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Edel é uma capitã militar experiente. Sua liderança e 
+                            habilidades táticas a tornam estrategista excepcional no campo de batalha.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 74%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 77%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Decane_1.jpg" alt="Decane" class="character-img"></div>
+                            <h3>Decane</h3>
+                            <span class="character-class">Bruxa do Caos</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Decane é uma bruxa do caos com poderes imprevisíveis. Sua magia 
+                            caótica pode tanto destruir inimigos quanto ajudar aliados.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 91%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 56%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 77%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Veigas_1.jpg" alt="Veigas" class="character-img"></div>
+                            <h3>Veigas</h3>
+                            <span class="character-class">Destruidor</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Veigas é um destruidor com poder imenso. Sua capacidade 
+                            de aniquilar inimigos o torna uma das forças mais temidas.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 96%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 54%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 73%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Ai_1.jpg" alt="Ai" class="character-img"></div>
+                            <h3>Ai</h3>
+                            <span class="character-class">Operadora</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Ai é uma operadora especializada em suporte tático. Suas habilidades 
+                            de coordenação e suporte são essenciais para o sucesso da equipe.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 68%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 74%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 81%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Kallia_1.jpg" alt="Kallia" class="character-img"></div>
+                            <h3>Kallia</h3>
+                            <span class="character-class">Investigadora</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Kallia é uma investigadora perspicaz. Sua habilidade 
+                            de analisar situações e encontrar fraquezas a torna estrategista valiosa.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 72%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 79%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Uno_1.jpg" alt="Uno" class="character-img"></div>
+                            <h3>Uno</h3>
+                            <span class="character-class">Misterioso</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Uno é um personagem envolto em mistério. Suas verdadeiras 
+                            habilidades e origens são desconhecidas, mas seu poder é inegável.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Iris.jpg" alt="Iris" class="character-img"></div>
+                            <h3>Iris</h3>
+                            <span class="character-class">Enigmática</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Iris é uma figura enigmática com poderes desconhecidos. Sua presença 
+                            misteriosa e habilidades únicas a tornam peça importante no tabuleiro.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Rey_1.jpg" alt="Rey" class="character-img"></div>
+                            <h3>Rey</h3>
+                            <span class="character-class">Caçador</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Rey é um caçador experiente com habilidades de rastreamento excepcionais. 
+                            Sua conexão com a natureza e precisão com armas o tornam combatente versátil.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 88%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 82%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="character-card-expanded">
+                        <div class="character-header">
+                            <div class="character-icon"><img src="Chars/Ui_character_gc_classic_Lin_1.jpg" alt="Lin" class="character-img"></div>
+                            <h3>Lin</h3>
+                            <span class="character-class">Mística</span>
+                        </div>
+                        <div class="character-info">
+                            <p>Lin é uma guerreira mística com poderes ancestrais. Sua sabedoria 
+                            e habilidades mágicas a tornam uma aliada poderosa em batalha.</p>
+                            <div class="character-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gameplay" class="gameplay-section">
+            <div class="container">
+                <h2 class="section-title">Gameplay</h2>
+                <div class="gameplay-content">
+                    <div class="gameplay-features">
+                        <div class="feature-card">
+                            <div class="feature-icon">🎮</div>
+                            <h3>Combate Dinâmico</h3>
+                            <p>Sistema de combate em tempo real com combos especiais e habilidades únicas para cada personagem.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">👥</div>
+                            <h3>Cooperativo</h3>
+                            <p>Jogue com amigos em missões cooperativas e desafie chefes poderosos juntos.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">📈</div>
+                            <h3>Evolução</h3>
+                            <p>Desenvolva seus personagens com novas habilidades e equipamentos conforme progride.</p>
+                        </div>
+                        <div class="feature-card guide-card">
+                            <div class="feature-icon">📖</div>
+                            <h3>Guia de Evolução</h3>
+                            <p>Aprenda a ordem perfeita para evoluir seus personagens e maximizar conquistas!</p>
+                            <a href="evolucao-personagens.html" class="btn btn-primary" style="margin-top: 15px; padding: 10px 20px; font-size: 0.9rem;">Ver Guia</a>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🌍</div>
+                            <h3>Mundo Expansivo</h3>
+                            <p>Explore diversos reinos e descubra os segredos do continente de Bermesiah.</p>
+                        </div>
+                    </div>
+                    <div class="gameplay-modes">
+                        <h3>Modos de Jogo</h3>
+                        <div class="mode-list">
+                            <div class="mode-item">
+                                <h4>🗡️ Missões Principais</h4>
+                                <p>Avance na história e salve o reino das forças das trevas.</p>
+                            </div>
+                            <div class="mode-item">
+                                <h4>⚔️ PvP Arena</h4>
+                                <p>Desafie outros jogadores em batalhas intensas 1v1 ou 3v3.</p>
+                            </div>
+                            <div class="mode-item">
+                                <h4>🏰 Dungeons</h4>
+                                <p>Explore masmorras perigosas em busca de tesouros e experiência.</p>
+                            </div>
+                            <div class="mode-item">
+                                <h4>👑 Boss Raids</h4>
+                                <p>Enfrente chefes épicos que exigem estratégia e trabalho em equipe.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="download-section">
+            <div class="container">
+                <h2 class="section-title">Baixe e Jogue</h2>
+                <div class="download-content">
+                    <div class="download-info">
+                        <h3>Pronto para a aventura?</h3>
+                        <p>Junte-se a milhões de jogadores em todo o mundo e comece sua jornada em Grand Chase hoje mesmo!</p>
+                        <div class="system-requirements">
+                            <h4>Requisitos Mínimos:</h4>
+                            <ul>
+                                <li>Windows 7 ou superior</li>
+                                <li>Processador Dual Core 2.0 GHz</li>
+                                <li>2 GB de RAM</li>
+                                <li>Placa de vídeo 256 MB</li>
+                                <li>2 GB de espaço em disco</li>
+                                <li>Conexão com internet</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="download-buttons">
+                        <a href="#" class="btn btn-primary btn-large">
+                            <span class="btn-icon">🖥️</span>
+                            Download Windows
+                        </a>
+                        <a href="#" class="btn btn-secondary btn-large">
+                            <span class="btn-icon">📱</span>
+                            Versão Mobile
+                        </a>
+                        <div class="download-note">
+                            <p>Gratuito para jogar com compras opcionais</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="community" class="community-section">
+            <div class="container">
+                <h2 class="section-title">Comunidade</h2>
+                <div class="community-content">
+                    <div class="community-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">10M+</div>
+                            <div class="stat-label">Jogadores Ativos</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">150+</div>
+                            <div class="stat-label">Personagens</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Servidores</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Anos de História</div>
+                        </div>
+                    </div>
+                    <div class="community-links">
+                        <h3>Junte-se à Comunidade</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <span class="social-icon">💬</span>
+                                <span>Discord</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <span class="social-icon">📘</span>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <span class="social-icon">🐦</span>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <span class="social-icon">📺</span>
+                                <span>YouTube</span>
+                            </a>
+                            <a href="#" class="social-link">
+                                <span class="social-icon">📷</span>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">⚔️</span>
+                        <span class="logo-text">Grand Chase</span>
+                    </div>
+                    <p>A aventura épica espera pelos bravos cavaleiros</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#characters">Personagens</a></li>
+                        <li><a href="#gameplay">Gameplay</a></li>
+                        <li><a href="#download">Download</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Comunidade</h4>
+                    <ul>
+                        <li><a href="#">Fórum</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Reddit</a></li>
+                        <li><a href="#">Suporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Sobre</h4>
+                    <ul>
+                        <li><a href="#">Termos de Serviço</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Grand Chase Fan Site. Todos os direitos reservados. Este é um site fã não oficial.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
